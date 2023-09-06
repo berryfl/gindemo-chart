@@ -50,6 +50,9 @@ spec:
           volumeMounts:
             - name: config-volume
               mountPath: /root/configs
+          env:
+            - name: GIN_MODE
+              value: release
       volumes:
         - name: config-volume
           configMap:
